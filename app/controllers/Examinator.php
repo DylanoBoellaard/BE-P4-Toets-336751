@@ -30,6 +30,6 @@ class Examinator extends BaseController
             'tableRows' => $rows
         ];
 
-        $this->view('rijlespakket/index', $data);
+        $this->view('examinator/index', $data);
     }
 }
