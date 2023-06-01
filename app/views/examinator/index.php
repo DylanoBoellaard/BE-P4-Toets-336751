@@ -13,13 +13,12 @@
 
         <table>
             <thead>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>Naam examinator</th>
+                <th>Datum Examen</th>
+                <th>Rijbewijscategorie</th>
+                <th>Rijschool</th>
+                <th>Stad</th>
+                <th>Uitslag examen</th>
             </thead>
             <tbody>
                 <?= $data['tableRows']; ?>
