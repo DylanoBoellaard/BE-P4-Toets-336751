@@ -11,17 +11,18 @@ class ExaminatorModel
 
     public function getExamens()
     {
-        $sql = "SELECT extor.Voornaam
-                        ,exam.Datum, exam.Rijbewijscategorie, exam.Rijschool, exam.Stad, exam.Uitslag
-                 FROM Examinator AS extor
+        $sql = "SELECT exam.Datum, exam.Rijbewijscategorie, exam.Rijschool, exam.Stad, exam.Uitslag
+                        ,extor.Voornaam
+                 FROM Examen AS exam
                  
-                 INNER JOIN Examen AS exam
-                 ON lpp.ExamenId = exam.Id
-
                  INNER JOIN ExamenPerExaminator AS epe
-                 ON epe.ExaminatorId = epe.Id
-                 
-                 ORDER BY count(exam.Geslaagd) ASC";
+                 ON epe.ExamenId = exam.Id
+
+                 INNER JOIN Examinator AS extor
+                 ON epe.ExaminatorId = extor.Id
+
+                 GROUP BY epe.ExaminatorId
+                 ORDER BY COUNT(exam.Uitslag) DESC";
 
         $this->db->query($sql);
 
