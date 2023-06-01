@@ -11,7 +11,7 @@ class Examinator extends BaseController
 
     public function index()
     {
-        $result = $this->examinatorModel->getRijlesPakketen();
+        $result = $this->examinatorModel->getExamens();
 
         $rows = "";
         foreach ($result as $rijlespakket) {
@@ -26,7 +26,7 @@ class Examinator extends BaseController
         }
 
         $data = [
-            'title' => 'Overzicht rijlespakketen leerlingen',
+            'title' => 'Overzicht afgenomen examens examinatoren',
             'tableRows' => $rows
         ];
 
