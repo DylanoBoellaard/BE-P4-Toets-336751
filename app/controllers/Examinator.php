@@ -16,7 +16,7 @@ class Examinator extends BaseController
         $rows = "";
         foreach ($result as $rijlespakket) {
             $rows .= "<tr>
-                        <td>$rijlespakket->Voornaam</td>
+                        <td>$rijlespakket->Voornaam $rijlespakket->Tussenvoegsel $rijlespakket->Achternaam</td>
                         <td>$rijlespakket->Datum</td>
                         <td>$rijlespakket->Rijbewijscategorie</td>
                         <td>$rijlespakket->Rijschool</td>
