@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS Examen
    ,Rijschool           VARCHAR(50)                     NOT NULL
    ,Stad                VARCHAR(50)                     NOT NULL
    ,Rijbewijscategorie  VARCHAR(10)                     NOT NULL
-   ,Datum               DATE                            NULL
+   ,Datum               Date                            NULL
    ,Uitslag             VARCHAR(25)                     NULL
    ,IsActief            BIT                             NOT NULL    DEFAULT 1
    ,Opmerkingen         VARCHAR(250)                        NULL    DEFAULT NULL
@@ -66,13 +66,13 @@ INSERT INTO Examen
     ,DatumGewijzigd
 )
 VALUES
-     ('100234', 'VolGasVooruit', 'Rotterdam', 'B', 2023-04-03, 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6))
-     ,('123432', 'InZijnVierDoorDeBocht', 'Sliedrecht', 'C', 2023-03-01, 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6))
-     ,('103234', 'LinksomRechtsom', 'Dordrecht', 'D', 2023-05-15, 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6))
-     ,('106452', 'OpDeVluchtStrook', 'Zwijndrecht', 'AM', 2023-05-15, 'Gezakt', 1, NULL, SYSDATE(6), SYSDATE(6))
-     ,('104546', 'RechtDoorEnGaan', 'Rotterdam', 'B', 2023-04-17, 'Gezakt', 1, NULL, SYSDATE(6), SYSDATE(6))
-     ,('100333', 'AltijdGeslaagd', 'Dordrecht', 'B', 2023-05-12, 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6))
-     ,('124444', 'RijlesVoorJou', 'Rotterdam', 'B', 2023-04-12, 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6));
+     ('100234', 'VolGasVooruit', 'Rotterdam', 'B', '2023-04-03', 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6))
+     ,('123432', 'InZijnVierDoorDeBocht', 'Sliedrecht', 'C', '2023-03-01', 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6))
+     ,('103234', 'LinksomRechtsom', 'Dordrecht', 'D', '2023-05-15', 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6))
+     ,('106452', 'OpDeVluchtStrook', 'Zwijndrecht', 'AM', '2023-05-15', 'Gezakt', 1, NULL, SYSDATE(6), SYSDATE(6))
+     ,('104546', 'RechtDoorEnGaan', 'Rotterdam', 'B', '2023-04-17', 'Gezakt', 1, NULL, SYSDATE(6), SYSDATE(6))
+     ,('100333', 'AltijdGeslaagd', 'Dordrecht', 'B', '2023-05-12', 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6))
+     ,('124444', 'RijlesVoorJou', 'Rotterdam', 'B', '2023-04-12', 'Geslaagd', 1, NULL, SYSDATE(6), SYSDATE(6));
     
 
 
